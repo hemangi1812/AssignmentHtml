@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spotify Playlist Bar</title>
+    <style>
+        .playlist-bar {
+            display: flex;
+            gap: 16px;
+            background-color: #121212;
+            padding: 20px;
+            overflow-x: auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .song-card {
+            display: flex;
+            align-items: center; /* Vertically centers the text content inside the card */
+            background-color: #181818;
+            padding: 10px 14px;
+            border-radius: 6px;
+            min-width: 220px;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .song-card:hover {
+            background-color: #282828;
+        }
+
+        .song-card img {
+            width: 45px;
+            height: 45px;
+            border-radius: 4px;
+            margin-right: 12px;
+            object-fit: cover;
+        }
+
+        .song-info h4 {
+            margin: 0 0 4px 0;
+            font-size: 14px;
+        }
+
+        .song-info p {
+            margin: 0;
+            font-size: 12px;
+            color: #b3b3b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="playlist-bar">
+        <!-- Song Card 1 -->
+        <div class="song-card">
+            <img src="https://via.placeholder.com/45" alt="Album Art">
+            <div class="song-info">
+                <h4>Blinding Lights</h4>
+                <p>The Weeknd</p>
+            </div>
+        </div>
+        <!-- Song Card 2 -->
+        <div class="song-card">
+            <img src="https://via.placeholder.com/45" alt="Album Art">
+            <div class="song-info">
+                <h4>Starboy</h4>
+                <p>The Weeknd, Daft Punk</p>
+            </div>
+        </div>
+        <!-- Song Card 3 -->
+        <div class="song-card">
+            <img src="https://via.placeholder.com/45" alt="Album Art">
+            <div class="song-info">
+                <h4>Shape of You</h4>
+                <p>Ed Sheeran</p>
+            </div>
+        </div>
+        <!-- Song Card 4 -->
+        <div class="song-card">
+            <img src="https://via.placeholder.com/45" alt="Album Art">
+            <div class="song-info">
+                <h4>Levitating</h4>
+                <p>Dua Lipa</p>
+            </div>
+        </div>
+        <!-- Song Card 5 -->
+        <div class="song-card">
+            <img src="https://via.placeholder.com/45" alt="Album Art">
+            <div class="song-info">
+                <h4>As It Was</h4>
+                <p>Harry Styles</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

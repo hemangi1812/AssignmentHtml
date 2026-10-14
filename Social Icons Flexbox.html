@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Apps - Flexbox Row</title>
+    <style>
+        .social-container {
+            display: flex;
+            justify-content: space-around; /* Distributes items evenly with equal space around them */
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 40px auto;
+            border: 1px solid #dee2e6;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            transition: transform 0.2s ease;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="social-container">
+        <a href="#"><img src="https://img.magnific.com/premium-vector/instagram-logo-vector-camera-icon-white-background_771881-267.jpg?semt=ais_hybrid&w=740&q=80" alt="Instagram" class="social-icon"></a>
+        <a href="#"><img src="https://img.magnific.com/premium-vector/whatsapp-logo-white-background-vector_980129-12073.jpg?semt=ais_hybrid&w=740&q=80" alt="WhatsApp" class="social-icon"></a>
+        <a href="#"><img src="https://logos-world.net/wp-content/uploads/2020/12/Zomato-Logo.jpg" alt="Zomato" class="social-icon"></a>
+        <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/spotify-white-icon.png" alt="Spotify" class="social-icon"></a>
+    </div>
+
+</body>
+</html>
