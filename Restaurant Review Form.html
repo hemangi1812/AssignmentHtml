@@ -1,0 +1,33 @@
+<div class="card shadow-sm border-0 p-4" style="max-width: 500px;">
+  <h4 class="fw-bold text-danger mb-3"><i class="bi bi-chat-heart me-2"></i>Write a Restaurant Review</h4>
+  
+  <form>
+    <!-- Name Field -->
+    <div class="mb-3">
+      <label for="reviewerName" class="form-label fw-semibold">Your Name</label>
+      <input type="text" class="form-control" id="reviewerName" placeholder="Enter your full name" required>
+    </div>
+    
+    <!-- Rating Field -->
+    <div class="mb-3">
+      <label for="reviewRating" class="form-label fw-semibold">Rating (1-5 Stars)</label>
+      <select class="form-select" id="reviewRating" required>
+        <option value="" selected disabled>Select rating</option>
+        <option value="5">⭐⭐⭐⭐⭐ (5 - Excellent)</option>
+        <option value="4">⭐⭐⭐⭐ (4 - Very Good)</option>
+        <option value="3">⭐⭐⭐ (3 - Average)</option>
+        <option value="2">⭐⭐ (2 - Poor)</option>
+        <option value="1">⭐ (1 - Terrible)</option>
+      </select>
+    </div>
+    
+    <!-- Review Message -->
+    <div class="mb-3">
+      <label for="reviewMessage" class="form-label fw-semibold">Review Message</label>
+      <textarea class="form-control" id="reviewMessage" rows="3" placeholder="Share details of your food and dining experience..." required></textarea>
+    </div>
+    
+    <!-- Submit Button -->
+    <button type="submit" class="btn btn-danger w-100 fw-bold">Submit Review</button>
+  </form>
+</div>

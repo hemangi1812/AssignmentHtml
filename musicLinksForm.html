@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Links Form & Gamer Tag Bio Link Page</title>
+  
+  <!-- Bootstrap 5 CSS & Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    body {
+      background-color: #0f172a;
+      color: #f8fafc;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    /* Task 3: Input fields with icons inside (Zomato / Input-group style using Bootstrap) */
+    .input-group-text {
+      background-color: #1e293b;
+      border-color: #334155;
+      color: #94a3b8;
+    }
+    .form-control {
+      background-color: #1e293b;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+    .form-control:focus {
+      background-color: #1e293b;
+      color: #f8fafc;
+      border-color: #3b82f6;
+      box-shadow: none;
+    }
+
+    /* Task 2: Gamer Tag Bio Link Page Styles */
+    .gamer-card {
+      max-width: 450px;
+      margin: auto;
+      background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+      border: 1px solid #334155;
+      border-radius: 1.5rem;
+    }
+    .avatar-img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border: 3px solid #3b82f6;
+    }
+    .bio-link-btn {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      color: #f8fafc;
+      transition: all 0.2s ease-in-out;
+    }
+    .bio-link-btn:hover {
+      background-color: #3b82f6;
+      color: #ffffff;
+      border-color: #3b82f6;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="py-5">
+
+  <div class="container">
+    
+    <!-- =========================================================
+         TASK 1, 3 & 4: musicLinksForm, Icon Inputs & Preview Cards
+         ========================================================= -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-8 col-lg-6">
+        <div class="card bg-dark border-secondary p-4 shadow rounded-4">
+          <h3 class="fw-bold text-white mb-3 text-center"><i class="bi bi-music-note-beamed text-primary me-2"></i>Add Music Profiles</h3>
+          <p class="text-muted small text-center mb-4">Enter your profile URLs below to generate your styled preview cards.</p>
+          
+          <!-- Task 1: Form called musicLinksForm -->
+          <form id="musicLinksForm" onsubmit="handleMusicFormSubmit(event)">
+            
+            <!-- Task 3: Spotify Input with Platform Icon -->
+            <div class="mb-3">
+              <label for="spotifyUrl" class="form-label small fw-semibold text-secondary">Spotify Profile URL</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-spotify text-success fs-5"></i></span>
+                <input type="url" class="form-control" id="spotifyUrl" placeholder="https://open.spotify.com/user/username" required>
+              </div>
+            </div>
+
+            <!-- Task 3: YouTube Music Input with Platform Icon -->
+            <div class="mb-3">
+              <label for="youtubeUrl" class="form-label small fw-semibold text-secondary">YouTube Music URL</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-youtube text-danger fs-5"></i></span>
+                <input type="url" class="form-control" id="youtubeUrl" placeholder="https://music.youtube.com/@username" required>
+              </div>
+            </div>
+
+            <!-- Task 3: Apple Music Input with Platform Icon -->
+            <div class="mb-3">
+              <label for="appleUrl" class="form-label small fw-semibold text-secondary">Apple Music URL</label>
+              <div class="input-group">
+                <span class="input-group-text"><i class="bi bi-apple text-light fs-5"></i></span>
+                <input type="url" class="form-control" id="appleUrl" placeholder="https://music.apple.com/profile/username" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 fw-bold py-2 mt-2">Generate Preview Cards</button>
+          </form>
+        </div>
+
+        <!-- Task 4: Dynamic Preview Cards Container -->
+        <div id="previewContainer" class="mt-4 d-flex flex-column gap-3">
+          <!-- Submitted preview cards will dynamically appear here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         TASK 2: Responsive 'Gamer Tag' Bio Link Page
+         ========================================================= -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="gamer-card p-4 shadow-lg text-center">
+          
+          <!-- Avatar & Gaming Alias -->
+          <div class="mb-3">
+            <img src="https://via.placeholder.com/150x150/1e293b/fff?text=🎮" class="rounded-circle avatar-img shadow mb-3" alt="Gamer Avatar">
+            <h2 class="fw-bold text-white mb-1">Vortex_99</h2>
+            <p class="text-primary small mb-0 fw-semibold"><i class="bi bi-controller me-1"></i> Competitive Streamer & Creator</p>
+          </div>
+          
+          <p class="text-muted small mb-4 px-3">Catch live matches every evening! Connect with me across channels below.</p>
+
+          <!-- Links to Twitch, Discord, and Steam -->
+          <div class="d-flex flex-column gap-3">
+            <a href="https://twitch.tv" target="_blank" class="bio-link-btn btn py-3 px-4 rounded-pill fw-semibold d-flex align-items-center justify-content-between">
+              <span class="d-flex align-items-center gap-3"><i class="bi bi-twitch text-purple fs-4" style="color: #9146FF;"></i> Twitch Stream</span>
+              <i class="bi bi-arrow-up-right text-muted"></i>
+            </a>
+
+            <a href="https://discord.com" target="_blank" class="bio-link-btn btn py-3 px-4 rounded-pill fw-semibold d-flex align-items-center justify-content-between">
+              <span class="d-flex align-items-center gap-3"><i class="bi bi-discord text-info fs-4" style="color: #5865F2;"></i> Discord Community</span>
+              <i class="bi bi-arrow-up-right text-muted"></i>
+            </a>
+
+            <a href="https://store.steampowered.com" target="_blank" class="bio-link-btn btn py-3 px-4 rounded-pill fw-semibold d-flex align-items-center justify-content-between">
+              <span class="d-flex align-items-center gap-3"><i class="bi bi-steam text-light fs-4"></i> Steam Profile</span>
+              <i class="bi bi-arrow-up-right text-muted"></i>
+            </a>
+          </div>
+
+          <div class="mt-4 pt-3 border-top border-secondary border-opacity-25 text-muted small">
+            &copy; 2026 Vortex Gaming Hub
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript to Handle Form Submission & Username Extraction -->
+  <script>
+    function extractUsername(url) {
+      try {
+        const parsedUrl = new URL(url);
+        const segments = parsedUrl.pathname.split('/').filter(Boolean);
+        if (segments.length > 0) {
+          // Return last valid segment or handle specific subpaths
+          return segments[segments.length - 1];
+        }
+        return parsedUrl.hostname;
+      } catch (e) {
+        return url; // fallback
+      }
+    }
+
+    function handleMusicFormSubmit(event) {
+      event.preventDefault();
+      
+      const spotify = document.getElementById('spotifyUrl').value;
+      const youtube = document.getElementById('youtubeUrl').value;
+      const apple = document.getElementById('appleUrl').value;
+
+      const linksData = [
+        { name: 'Spotify', url: spotify, icon: 'bi-spotify', color: 'text-success', bgBadge: 'bg-success-subtle text-success' },
+        { name: 'YouTube Music', url: youtube, icon: 'bi-youtube', color: 'text-danger', bgBadge: 'bg-danger-subtle text-danger' },
+        { name: 'Apple Music', url: apple, icon: 'bi-apple', color: 'text-light', bgBadge: 'bg-secondary-subtle text-light' }
+      ];
+
+      const container = document.getElementById('previewContainer');
+      container.innerHTML = '<h5 class="fw-bold text-white fs-6 mb-2">Generated Preview Cards:</h5>';
+
+      linksData.forEach(item => {
+        const username = extractUsername(item.url);
+        
+        const cardHTML = `
+          <div class="card bg-dark border-secondary p-3 shadow-sm d-flex flex-row align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <div class="fs-3 ${item.color} p-2 bg-black rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                <i class="bi ${item.icon}"></i>
+              </div>
+              <div>
+                <span class="badge ${item.bgBadge} mb-1 small">${item.name}</span>
+                <h6 class="text-white mb-0 text-truncate" style="max-width: 200px;">@${username}</h6>
+              </div>
+            </div>
+            <a href="${item.url}" target="_blank" class="btn btn-outline-light btn-sm px-3 fw-bold rounded-pill">
+              Visit <i class="bi bi-box-arrow-up-right ms-1"></i>
+            </a>
+          </div>
+        `;
+        container.innerHTML += cardHTML;
+      });
+    }
+  </script>
+</body>
+</html>

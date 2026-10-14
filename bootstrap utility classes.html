@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Utility & Styling Showcase</title>
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Task 4: Custom CSS overriding Bootstrap's primary button color -->
+  <style>
+    .btn-primary {
+      background-color: #ff3366 !important; /* Custom vibrant pinkish-red shade */
+      border-color: #ff3366 !important;
+    }
+    .btn-primary:hover {
+      background-color: #e62e5c !important;
+      border-color: #e62e5c !important;
+    }
+  </style>
+</head>
+<body class="py-5">
+
+  <!-- Task 5: Main Container with Theme Switcher Target Classes -->
+  <div id="mainContainer" class="container bg-light text-dark p-4 rounded shadow transition-all duration-300">
+    
+    <!-- Theme Switcher Header Controls -->
+    <div class="d-flex justify-content-between align-items-center mb-5 border-bottom pb-3">
+      <h2 class="fw-bold mb-0">Bootstrap Showcase Dashboard</h2>
+      <!-- Task 5: Theme Switcher Button -->
+      <button id="themeToggleBtn" class="btn btn-outline-secondary btn-sm" onclick="toggleTheme()">
+        <i id="themeIcon" class="bi bi-moon-fill"></i> Toggle Dark/Light Mode
+      </button>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- ==========================================
+           TASK 1: Flipkart-style Product Card with 3 Spacing Levels
+           ========================================== -->
+      <div class="col-md-6 col-lg-4">
+        <h5 class="text-muted small fw-bold mb-2">1. Spacing Levels (Margin & Padding)</h5>
+        <!-- Outer wrapper with spacing level 3 (mt-3), inner card with level 5 padding (p-5), content with level 2 bottom margin (mb-2) -->
+        <div class="mt-3">
+          <div class="card shadow-sm border-0 p-3 bg-white text-dark">
+            <div class="p-2 bg-light rounded text-center mb-3">
+              <img src="https://via.placeholder.com/150x150?text=Product" class="img-fluid rounded" alt="Product Image" style="height: 140px; object-fit: contain;">
+            </div>
+            <h6 class="card-title fw-bold mb-2">Wireless Bluetooth Noise-Cancelling Headphones</h6>
+            <p class="text-success fw-semibold mb-0">₹2,999 <span class="text-muted text-decoration-line-through small">₹4,999</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TASK 2: Movie Review Card (BookMyShow style) with Typography Utilities
+           ========================================== -->
+      <div class="col-md-6 col-lg-4">
+        <h5 class="text-muted small fw-bold mb-2">2. Typography Utilities</h5>
+        <div class="card shadow-sm border-0 p-4 bg-white text-dark h-100">
+          <!-- Movie Title: Bold & Large (fs-4 fw-bold) -->
+          <h4 class="fs-4 fw-bold text-truncate mb-1">Interstellar: Director's Cut</h4>
+          <!-- Rating: Small text, light weight, muted color -->
+          <div class="text-muted fs-6 fw-light mb-3">
+            <span class="text-warning fw-bold fs-5">★ 4.8</span> / 5 (12.4k Ratings)
+          </div>
+          <!-- Review Text: Italicized, medium size, normal weight -->
+          <p class="fs-6 fst-italic text-secondary mb-0">
+            "An absolute cinematic masterpiece. The visual effects and sound design completely blew me away in the theater!"
+          </p>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TASK 3: Zomato-style Restaurant List with Color Utilities
+           ========================================== -->
+      <div class="col-md-6 col-lg-4">
+        <h5 class="text-muted small fw-bold mb-2">3. Restaurant List (Color Utilities)</h5>
+        <div class="card shadow-sm border-0 p-3 bg-white text-dark">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h6 class="fw-bold mb-0">Spice Symphony</h6>
+            <!-- Color Utility 1: Highlight Open/Closed Status (bg-success text-white) -->
+            <span class="badge bg-success text-white px-2 py-1 small">Open Now</span>
+          </div>
+          <p class="text-muted small mb-2">North Indian, Chinese • ₹400 for two</p>
+          
+          <div class="d-flex gap-2">
+            <!-- Color Utility 2: Highlight Rating (bg-warning text-dark) -->
+            <span class="badge bg-warning text-dark fw-bold px-2 py-1">
+              <i class="bi bi-star-fill"></i> 4.3
+            </span>
+            <!-- Color Utility 3: Highlight Offer/Promo (text-danger bg-danger-subtle) -->
+            <span class="badge bg-danger-subtle text-danger border border-danger-subtle px-2 py-1 fw-semibold">
+              50% OFF up to ₹100
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TASK 4: Custom Primary Button ('Book Ticket')
+           ========================================== -->
+      <div class="col-md-6 col-lg-6">
+        <h5 class="text-muted small fw-bold mb-2">4. Custom Primary Button Override</h5>
+        <div class="card shadow-sm border-0 p-4 bg-white text-dark">
+          <h6 class="fw-bold">Epic Sci-Fi Experience</h6>
+          <p class="text-muted small">Secure your seats for the midnight premiere screening today.</p>
+          <!-- Using btn-primary class which has been custom overridden via CSS in the head -->
+          <button class="btn btn-primary fw-bold text-white w-100 py-2">
+            <i class="bi bi-ticket-perforated-fill me-2"></i> Book Ticket
+          </button>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TASK 5: Theme Switcher Context Card
+           ========================================== -->
+      <div class="col-md-6 col-lg-6">
+        <h5 class="text-muted small fw-bold mb-2">5. Theme Switcher Demo Component</h5>
+        <div class="card shadow-sm border-0 p-4 bg-white text-dark h-100">
+          <h6 class="fw-bold">Interactive Theme Switcher</h6>
+          <p class="text-muted small mb-3">Click the toggle button at the top right of this container to switch the main layout theme background and text colors dynamically using JavaScript & Bootstrap utility classes.</p>
+          <div class="alert alert-info py-2 small mb-0">
+            <i class="bi bi-info-circle-fill me-1"></i> Current state toggles between <code>bg-light</code>/<code>text-dark</code> and <code>bg-dark</code>/<code>text-light</code>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Task 5 JavaScript Logic for Theme Switcher -->
+  <script>
+    function toggleTheme() {
+      const container = document.getElementById('mainContainer');
+      const icon = document.getElementById('themeIcon');
+      
+      // Check if container currently has light background
+      if (container.classList.contains('bg-light')) {
+        // Switch to Dark Theme classes
+        container.classList.remove('bg-light', 'text-dark');
+        container.classList.add('bg-dark', 'text-light');
+        
+        // Update cards background inside container for proper contrast in dark mode
+        document.querySelectorAll('.card').forEach(card => {
+          card.classList.remove('bg-white', 'text-dark');
+          card.classList.add('bg-secondary', 'text-white');
+        });
+
+        // Change toggle button icon to sun
+        icon.classList.remove('bi-moon-fill');
+        icon.classList.add('bi-sun-fill');
+      } else {
+        // Switch back to Light Theme classes
+        container.classList.remove('bg-dark', 'text-light');
+        container.classList.add('bg-light', 'text-dark');
+        
+        // Restore cards background
+        document.querySelectorAll('.card').forEach(card => {
+          card.classList.remove('bg-secondary', 'text-white');
+          card.classList.add('bg-white', 'text-dark');
+        });
+
+        // Change toggle button icon to moon
+        icon.classList.remove('bi-sun-fill');
+        icon.classList.add('bi-moon-fill');
+      }
+    }
+  </script>
+</body>
+</html>
