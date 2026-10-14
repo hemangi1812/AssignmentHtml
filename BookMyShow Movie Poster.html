@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookMyShow Poster Grid</title>
+    <style>
+        .poster-grid {
+            display: flex;
+            gap: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Relatively positioned parent container */
+        .movie-card {
+            position: relative;
+            width: 180px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+
+        .movie-card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Absolutely positioned overlay badge */
+        .badge-new {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #f84464; /* BookMyShow pink/red */
+            color: white;
+            padding: 4px 8px;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .movie-title {
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            background: #fff;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-grid">
+        <div class="movie-card">
+            <span class="badge-new">New Release</span>
+            <img src="https://via.placeholder.com/180x260" alt="Movie Poster">
+            <p class="movie-title">Devara: Part 1</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Chat Badge</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 200vh; /* Added height to demonstrate scrolling behavior */
+            padding: 20px;
+        }
+
+        .whatsapp-badge {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .whatsapp-badge:hover {
+            background-color: #20ba5a;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Scroll Down the Page</h1>
+    <p>Notice how the WhatsApp badge stays locked to the bottom right corner of your screen.</p>
+
+    <!-- Fixed WhatsApp Badge -->
+    <a href="#" class="whatsapp-badge">💬 Chat with Us</a>
+
+</body>
+</html>

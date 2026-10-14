@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flipkart Product Tile</title>
+    <style>
+        .product-tile {
+            width: 220px;
+            border: 1px solid #dcdcdc;
+            padding: 12px;
+            font-family: Arial, sans-serif;
+            border-radius: 4px;
+        }
+
+        /* Block element: takes up the full available width and forces a line break */
+        .product-name {
+            display: block;
+            font-size: 16px;
+            font-weight: bold;
+            color: #212121;
+            margin: 10px 0 6px 0;
+        }
+
+        /* Inline-block element: flows inline but respects width/height/padding */
+        .product-price {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #388e3c;
+        }
+
+        /* Display none removes the element from rendering layout entirely */
+        .hide-price {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-tile">
+        <img src="https://via.placeholder.com/200x150" alt="Product Image" style="width: 100%;">
+        <span class="product-name">Wireless Gaming Mouse</span>
+        <!-- Toggle the 'hide-price' class on or off to test display: none -->
+        <span class="product-price">₹1,499</span>
+    </div>
+
+</body>
+</html>
